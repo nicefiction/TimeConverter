@@ -20,6 +20,7 @@
 		09559951261776FA0096220D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09559954261776FA0096220D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09559956261776FA0096220D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0955995D261797020096220D /* ConvertingUnits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConvertingUnits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 				09559951261776FA0096220D /* Assets.xcassets */,
 				09559956261776FA0096220D /* Info.plist */,
 				09559953261776FA0096220D /* Preview Content */,
+				0955995D261797020096220D /* ConvertingUnits.playground */,
 			);
 			path = TimeConverter;
 			sourceTree = "<group>";
