@@ -41,35 +41,38 @@ struct ContentView: View {
     
     var body: some View {
         
-        Form {
-            Section(header: Text("convert :")) {
-                TextField("Enter a number ." ,
-                          text: $inputNumber)
-            }
-            
-            Section(header : Text("from :")) {
-                Picker("Select start unit" ,
-                       selection : $inputUnitIndex) {
-                    ForEach(0..<inputUnits.count) {
-                        return Text("\(inputUnits[$0])")
-                    }
+        NavigationView {
+            Form {
+                Section(header: Text("convert :")) {
+                    TextField("Enter a number ." ,
+                              text: $inputNumber)
                 }
-                .pickerStyle(SegmentedPickerStyle())
-            }
-            
-            Section(header : Text("to :")) {
-                Picker("Select end unit" ,
-                       selection : $outputUnitIndex) {
-                    ForEach(0..<outputUnits.count) {
-                        return Text("\(outputUnits[$0])")
+                
+                Section(header : Text("from :")) {
+                    Picker("Select start unit" ,
+                           selection : $inputUnitIndex) {
+                        ForEach(0..<inputUnits.count) {
+                            return Text("\(inputUnits[$0])")
+                        }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                
+                Section(header : Text("to :")) {
+                    Picker("Select end unit" ,
+                           selection : $outputUnitIndex) {
+                        ForEach(0..<outputUnits.count) {
+                            return Text("\(outputUnits[$0])")
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Section(header: Text("Result :")) {
+                    Text("\(convertedNumber , specifier : "%.6f") \(outputUnits[outputUnitIndex])")
+                }
             }
-            
-            Section(header: Text("Result :")) {
-                Text("\(convertedNumber , specifier : "%.6f") \(outputUnits[outputUnitIndex])")
-            }
+            .navigationTitle("Time Converter")
         }
     }
     
